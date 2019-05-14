@@ -1,4 +1,5 @@
 import csv
+from collections import OrderedDict
 
 """
 Please write you name here: Thomas Lawrence
@@ -7,6 +8,11 @@ Please write you name here: Thomas Lawrence
 
 def process_shifts(path_to_csv):
 
+    time_dictionary = OrderedDict()
+    for x in range(0, 24):
+        time_dictionary[f'{x}:00'] = 0
+
+    print(time_dictionary)
 
     input_file = csv.DictReader(open(path_to_csv))
     for row in input_file:
@@ -26,7 +32,8 @@ def process_shifts(path_to_csv):
     50 pounds
     :rtype dict:
     """
-    return
+
+    return time_dictionary
 
 
 def process_sales(path_to_csv):
