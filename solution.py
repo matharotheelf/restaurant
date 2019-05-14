@@ -8,7 +8,7 @@ Please write you name here: Thomas Lawrence
 def process_shifts(path_to_csv):
 
 
-    input_file = csv.DictReader(open("work_shifts.csv"))
+    input_file = csv.DictReader(open(path_to_csv))
     for row in input_file:
       print(row)
     """
@@ -97,9 +97,9 @@ def main(path_to_shifts, path_to_sales):
 
 if __name__ == '__main__':
     # You can change this to test your code, it will not be used
-    path_to_sales = ""
-    path_to_shifts = ""
+    path_to_sales = "transactions.csv"
+    path_to_shifts = "work_shifts.csv"
     best_hour, worst_hour = main(path_to_shifts, path_to_sales)
 
 
-# Please write you name here:
+# Please write you name here: Thomas Lawrence
